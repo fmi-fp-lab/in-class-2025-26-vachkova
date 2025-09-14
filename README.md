@@ -57,7 +57,7 @@
 
 ### Версия на компилатора
 
-В курса ще работим с версия `9.4.7` на Haskell-ският компилатор (`ghc`). Съответно трябва когато инсталирате компилатора да внимавате да е `9.4.7`
+В курса ще работим с версия `9.12.2` на Haskell-ският компилатор (`ghc`). Съответно трябва когато инсталирате компилатора да внимавате да е `9.12.2`
 
 Инсрукции за как да си инсталирате най-важните Haskell-ски инструменти има в следващата секция.
 
@@ -72,7 +72,7 @@
 След като го инсталирате, разгледайте [инсрукциите за използване на `ghcup`](https://www.haskell.org/ghcup/guide/), но накратко
 
 ```bash
-ghcup install ghc 9.4.7
+ghcup install ghc 9.12.2
 ghcup install cabal-install
 ghcup install haskell-language-server
 ```
@@ -81,9 +81,9 @@ ghcup install haskell-language-server
 
 След това, моля проверете дали работи всичко като изпълните командата `ghci` в терминал. Би трябвало да видите нещо такова:
 ```
-GHCi, version 9.4.7: https://www.haskell.org/ghc/  :? for help
+GHCi, version 9.12.2: https://www.haskell.org/ghc/  :? for help
 ```
-Обърнете внимание на версията - трябва да е 9.4.7.
+Обърнете внимание на версията - препоръчително да е 9.12.2.
 
 При спънки не се безпокойте да се свържете с мен.
 
@@ -129,6 +129,7 @@ GHCi, version 9.4.7: https://www.haskell.org/ghc/  :? for help
     * [Parse, don't validate][parse-dont-validate]
     * https://runtimeverification.com/blog/code-smell-boolean-blindness/
     * https://existentialtype.wordpress.com/2011/03/15/boolean-blindness/
+  * [Functional Design Patterns][functional-design-patterns]
   * Програмиране с типове - [Thinking with Types](https://thinkingwithtypes.com/)
   * Паралелно и конкуретно програмиране - [Parallel and Concurrent Programming in Haskell](https://simonmar.github.io/pages/pcph.html)
     * една от въведителните части е доста добра за добиване на по-добро разбиране над оценителния модел на Haskell
@@ -139,3 +140,4 @@ GHCi, version 9.4.7: https://www.haskell.org/ghc/  :? for help
 Съветвам ви директно да ме питате за повече ресурси ако ви интересува конкретна тема.
 
 [parse-dont-validate]: https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/
+[functional-design-patterns]: https://www.youtube.com/watch?v=srQt1NAHYC0

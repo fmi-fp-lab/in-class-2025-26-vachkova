@@ -25,25 +25,25 @@
 
 Създайте вашето хранилище:
 
-Навигирайте до [страницата на курса][github-classrooms] на GitHub Classrooms за тазгодишното издание на курса, а оттам до `inclass-20XX-XX` заданието (вероятно [тук][github-classrooms-inclass])). Там ще намерите бутон за "приемане" на "заданието" (`inclass` нещата съм ги моделирал като домашно без краен срок) - той автоматично ще си създаде копие на репото, в което аз мажа по време на час.
+Навигирайте до [канала с обявления в Discord][announcements-channel] за тазгодишното издание на курса, а оттам до `in-class-2025-26` заданието (вероятно [тук][github-classrooms-in-class])). Там ще намерите бутон за "приемане" на "заданието" (`in-class` нещата съм ги моделирал като домашно без краен срок) - той автоматично ще си създаде копие на репото, в което аз мажа по време на час.
 
 Клонирайте вашето хранилище:
 
 ```sh
 # ssh клониране
-git clone git@github.com:fmi-fp-lab/inclass-20XX-XX-ВАШЕТО_GITHUB_ИМЕ.git
+git clone git@github.com:fmi-fp-lab/in-class-2025-26-ВАШЕТО_GITHUB_ИМЕ.git
 # HTTPS клониране
-git clone https://github.com/fmi-fp-lab/inclass-20XX-XX-ВАШЕТО_GITHUB_ИМЕ.git
+git clone https://github.com/fmi-fp-lab/in-class-2025-26-ВАШЕТО_GITHUB_ИМЕ.git
 ```
 
 > [!TIP]
-> Може да си прекръстите локалната папка да не се казва `inclass-20XX-XX-ВАШЕТО_GITHUB_ИМЕ`
+> Може да си прекръстите локалната папка да не се казва `in-class-2025-26-ВАШЕТО_GITHUB_ИМЕ`
 
 В това хранилище можете спокойно да си мажете и commit-push-вате на `master`, а при ъпдейт от моя страна (най-често в края на лекционната част на упражнението и/или ако нещо съм осрал и съм пушнал следварително, че да го оправя) аз ще ви пусна автоматични [pull request][github-prs]-и, които можете (вие или аз, според зависи) да си merge-нете във вашите хранилища, че да придобиете достъп до новите нещица (и оптимално запазвайки старите си ваши промени, най-често по `.hs` файловете за съответното упражнение).
 
 ## Домашни и проект
 
-Абсолютно същата идея и процес както при `In Class` хранилището, само дето в [страницата на курса][github-classrooms] ще потърсите съотвеното задание за въпросното домашно (или проект). Оттам нататък процесът е същият.
+Абсолютно същата идея и процес както при `In Class` хранилището, само дето в [страницата на курса][announcements-channel] ще потърсите съотвеното задание за въпросното домашно (или проект). Оттам нататък процесът е същият.
 
 Единствена разлика е, че GitHub автомагически ще ви отвори [pull request][github-prs]-и, в които ще можем да си комуникираме по вашият код, като е хубаво този процес да почне възможно най-рано, че да може по-малко време да сте забили ако нещо не върви (TLDR - често commit-вайте и push-вайте)
 
@@ -82,7 +82,7 @@ git push -u origin HEAD
 
 ## FAQ
 
-### Опитах се да включа новите промени от часа (от автоматичният PR), но GitHub ми казва, че "има конфлики". Какво да правя?
+### Опитах се да включа новите промени от часа (от автоматичния PR), но GitHub ми казва, че "има конфлики". Какво да правя?
 
 За най-сигурно - кажете ми първо, може да е проблем от моя страна.
 Може да дискуритаме проблема на място, в кордата или пък директно във въпросият автоматичен PR.
@@ -135,8 +135,8 @@ git config --global merge.conflictstyle diff3
 [git-book]: https://git-scm.com/book/en/v2
 [ssh-keygen]: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key
 [github-ssh-add]: https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
-[github-classrooms]: https://classroom.github.com/classrooms/TODO-fmi-fp-lab-20XX-XX-classroom/assignments/inclass-20XX-XX
-[github-classrooms-inclass]: https://classroom.github.com/classrooms/TODO-fmi-fp-lab-20XX-XX-classroom/assignments/inclass-20XX-XX
+[announcements-channel]: https://discord.com/channels/1138017890671542354/1158267388211499079
+[github-classrooms-in-class]: https://classroom.github.com/classrooms/182299895-fmi-fp-lab-2025-26-classroom/assignments/in-class-2025-26
 [github-prs]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests
 [github-create-pr]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
 [git-switch]: https://github.blog/2019-08-16-highlights-from-git-2-23/#experimental-alternatives-for-git-checkout
