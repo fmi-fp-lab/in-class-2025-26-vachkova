@@ -13,6 +13,8 @@
 module HOF where
 
 import Prelude hiding (const, curry, id, log, map, on, swap, uncurry, until, ($), (.))
+import Control.Monad (join, liftM2, ap)
+import Control.Monad.Fix (fix)
 
 -- TODO:
 -- - remind about github classrooms -> in-class && HW00
@@ -77,6 +79,18 @@ neshto Tura = 6
 -- - infixr 0 $ (draw AST of an operator-heavy expression)
 -- - (.)
 
+plusTwo :: Integer -> Integer
+plusTwo = applyTwice (+1)
+
+-- >>> applyTwice (+1) 5
+-- 7
+
+applyTwice :: (a -> a) -> a -> a
+applyTwice f x = f (f x)
+
+id :: a -> a
+id x = x
+
 ($) :: (a -> b) -> a -> b
 f $ a = f a
 infixr 0 $
@@ -132,11 +146,26 @@ const = undefined
 -- 45
 
 compose :: (b -> c) -> (a -> b) -> a -> c
-compose = undefined
+compose f g x = f (g x)
+
+-- Wild UTF8 non-operator names
+猫 :: Integer
+猫 = 5
 
 -- Play around with the syntax (how many parenthesis can you stuff in here?)
 (.) :: (b -> c) -> (a -> b) -> a -> c
 (.) = compose
+
+-- Wild UTF8 operator names
+(∘) :: (b -> c) -> (a -> b) -> a -> c
+(∘) = (.)
+
+-- Correct only for 1/4th, kek
+(√) :: Integer -> Integer
+(√) x = x * 2
+
+-- >>> ((*2) ∘ (+1)) 3
+-- 8
 
 -- TASK:
 -- Iterate a function f n times over a base value x.
@@ -197,7 +226,7 @@ uncurry = undefined
 -- 59
 
 on :: (b -> b -> c) -> (a -> b) -> a -> a -> c
-on = undefined
+on = join . ((flip . ((.) .)) .) . (.)
 
 -- TASK:
 -- Execute a function, until the result starts sastifying a given predicate
@@ -206,7 +235,11 @@ on = undefined
 -- 1372
 
 until :: (a -> Bool) -> (a -> a) -> a -> a
-until = undefined
+-- until p f x = if p x then x else until p f (f x)
+until = fix (ap ((.) . ap . (if' =<<)) . flip flip id . (liftM2 (.) .))
+
+if' :: Bool -> a -> a -> a
+if' p x y = if p then x else y
 
 -- TASK:
 -- Apply two different functions to the two different arguments of a tuple
