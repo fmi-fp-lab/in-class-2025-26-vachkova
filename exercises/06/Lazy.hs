@@ -12,6 +12,7 @@
 {-# HLINT ignore "Use lambda-case" #-}
 {-# HLINT ignore "Redundant lambda" #-}
 {-# HLINT ignore "Use map" #-}
+{-# HLINT ignore "Eta reduce" #-}
 
 module Lazy where
 
