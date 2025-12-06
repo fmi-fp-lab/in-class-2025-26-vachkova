@@ -24,7 +24,7 @@ import Data.Maybe (listToMaybe)
 -- TODO:
 -- 0. reminder of what we did last time - look at the (`IO`) combinators and show them briefly again
 -- 1. newtype -- ask if fine with records?
--- 3. add `Functor`, add `Applicative` "`fmap` for (multivariable functions")
+-- 3. add `Functor`, add `Applicative` "`fmap` for (multivariable functions)"
 -- 4. add `Monad`, show `do` desugaring
 -- 5. mention how we get some free stuff - `many` and `some` are important, `when`, `guard`, `sequence`, `traverse`?
 --    (show hoogle for them)
@@ -37,7 +37,6 @@ import Data.Maybe (listToMaybe)
 --    implement parsing a C function decl
 -- 8. json?
 
--- data Parser a = MkParser (String -> [(String, a)])
 newtype Parser a = MkParser {runParser :: String -> [(String, a)]}
 
 parseMany :: Parser a -> String -> [(String, a)]
@@ -55,12 +54,6 @@ nom =
     case str of
       [] -> []
       c : rest -> [(rest, c)]
-
--- neshto = a A | b B
--- A := a A | ε
--- B := ε
-
--- [ y | y <- xs, y % 3 == 0 ]
 
 {-
 
